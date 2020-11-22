@@ -48,6 +48,10 @@ const generatedModel = {
       
       // EXTERNAL RELATIONS
       /*
+      _instructor: [{
+        type: Schema.ObjectId,
+        ref: "courseMaterials"
+      }],
       _teacher: {
         type: Schema.ObjectId,
         ref: "exam"

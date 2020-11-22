@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 // Do not edit this comment content, it will be overwritten in next Skaffolder generation
 import { UserService } from './services/user.service';
 import { CourseService } from './services/course.service';
+import { CourseMaterialsService } from './services/course-materials.service';
 import { ExamService } from './services/exam.service';
+import { Session_01Service } from './services/session_01.service';
 import { StudentService } from './services/student.service';
 import { TeacherService } from './services/teacher.service';
 
@@ -21,7 +23,9 @@ import { AuthInterceptor } from './security/auth.interceptor';
 // Do not edit this comment content, it will be overwritten in next Skaffolder generation
     UserService,
     CourseService,
+    CourseMaterialsService,
     ExamService,
+    Session_01Service,
     StudentService,
     TeacherService,
  /* END PROVIDERS */

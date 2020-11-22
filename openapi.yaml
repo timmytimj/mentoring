@@ -1121,6 +1121,75 @@ components:
       required:
         - _id
         - name
+    courseMaterials:
+      x-skaffolder-id: 5fb9f6d1a3e0491123232d69
+      x-skaffolder-id-db: 5fb9b32ea3e0491123232c5f
+      x-skaffolder-id-entity: 5fb9f6d1a3e0491123232d60
+      x-skaffolder-url: /coursematerials
+      properties:
+        _id:
+          type: string
+          x-skaffolder-required: true
+        Instructor:
+          type: string
+          x-skaffolder-id-attr: 5fb9f6d1a3e0491123232d63
+          x-skaffolder-type: String
+          x-skaffolder-required: true
+        Material:
+          type: string
+          x-skaffolder-id-attr: 5fb9f6d1a3e0491123232d66
+          x-skaffolder-type: String
+          x-skaffolder-required: true
+        Name:
+          type: string
+          x-skaffolder-id-attr: 5fb9f6d1a3e0491123232d61
+          x-skaffolder-type: String
+          x-skaffolder-required: true
+        Session:
+          type: number
+          x-skaffolder-id-attr: 5fb9f6d1a3e0491123232d65
+          x-skaffolder-type: Number
+          x-skaffolder-required: true
+        Subject:
+          type: string
+          x-skaffolder-id-attr: 5fb9f6d1a3e0491123232d64
+          x-skaffolder-type: String
+          x-skaffolder-required: true
+        id:
+          type: number
+          x-skaffolder-id-attr: 5fb9f6d1a3e0491123232d62
+          x-skaffolder-type: Number
+          x-skaffolder-required: true
+        sessionId:
+          type: number
+          x-skaffolder-id-attr: 5fb9f71aa3e0491123232d6b
+          x-skaffolder-type: Number
+          x-skaffolder-required: true
+      x-skaffolder-relations:
+        _instructor:
+          x-skaffolder-id: 5fb9f6d1a3e0491123232d67
+          x-skaffolder-type: m:m
+          x-skaffolder-ent1: 5fb9f6d1a3e0491123232d60
+          x-skaffolder-ent2: 5fb9c40fa3e0491123232cf8
+        _session_01:
+          x-skaffolder-id: 5fb9f857a3e0491123232d77
+          x-skaffolder-type: m:m
+          x-skaffolder-ent1: 5fb9f6d1a3e0491123232d60
+          x-skaffolder-ent2: 5fb9f842a3e0491123232d6d
+        _test:
+          x-skaffolder-id: 5fb9f6d1a3e0491123232d68
+          x-skaffolder-type: 1:m
+          x-skaffolder-ent1: 5fb9f6d1a3e0491123232d60
+          x-skaffolder-ent2: 5fb9c444a3e0491123232d03
+      required:
+        - _id
+        - Instructor
+        - Material
+        - Name
+        - Session
+        - Subject
+        - id
+        - sessionId
     exam:
       x-skaffolder-id: 5fb9c444a3e0491123232d06
       x-skaffolder-id-db: 5fb9b32ea3e0491123232c5f
@@ -1160,6 +1229,58 @@ components:
           x-skaffolder-ent2: 5fb9c40fa3e0491123232cf8
       required:
         - _id
+    session_01:
+      x-skaffolder-id: 5fb9f842a3e0491123232d75
+      x-skaffolder-id-db: 5fb9b32ea3e0491123232c5f
+      x-skaffolder-id-entity: 5fb9f842a3e0491123232d6d
+      x-skaffolder-url: /session_01
+      properties:
+        _id:
+          type: string
+          x-skaffolder-required: true
+        Duration:
+          type: integer
+          x-skaffolder-id-attr: 5fb9f842a3e0491123232d6f
+          x-skaffolder-type: Date
+          x-skaffolder-required: true
+        Goal:
+          type: string
+          x-skaffolder-id-attr: 5fb9f842a3e0491123232d71
+          x-skaffolder-type: String
+          x-skaffolder-required: true
+        Instructor:
+          type: string
+          x-skaffolder-id-attr: 5fb9f842a3e0491123232d70
+          x-skaffolder-type: String
+          x-skaffolder-required: true
+        Title:
+          type: string
+          x-skaffolder-id-attr: 5fb9f842a3e0491123232d6e
+          x-skaffolder-type: String
+          x-skaffolder-required: true
+        task:
+          type: number
+          x-skaffolder-id-attr: 5fb9f842a3e0491123232d72
+          x-skaffolder-type: Number
+          x-skaffolder-required: true
+      x-skaffolder-relations:
+        _course:
+          x-skaffolder-id: 5fb9f842a3e0491123232d74
+          x-skaffolder-type: 1:m
+          x-skaffolder-ent1: 5fb9f842a3e0491123232d6d
+          x-skaffolder-ent2: 5fb9c424a3e0491123232cfe
+        _courseMaterials:
+          x-skaffolder-id: 5fb9f842a3e0491123232d73
+          x-skaffolder-type: 1:m
+          x-skaffolder-ent1: 5fb9f842a3e0491123232d6d
+          x-skaffolder-ent2: 5fb9f6d1a3e0491123232d60
+      required:
+        - _id
+        - Duration
+        - Goal
+        - Instructor
+        - Title
+        - task
     student:
       x-skaffolder-id: 5fb9c3f0a3e0491123232cf5
       x-skaffolder-id-db: 5fb9b32ea3e0491123232c5f
@@ -1232,6 +1353,8 @@ components:
         - 5fb9c583a3e0491123232d22
         - 5fb9c58da3e0491123232d32
         - 5fb9c597a3e0491123232d3b
+        - 5fb9f521a3e0491123232d5d
+        - 5fb9c58da3e0491123232d26
       x-skaffolder-roles: []
     - x-skaffolder-id: 5fb9c58da3e0491123232d26
       x-skaffolder-name: courseEdit
@@ -1245,7 +1368,8 @@ components:
         - 5fb9c58da3e0491123232d2c
         - 5fb9c58da3e0491123232d2e
         - 5fb9c58da3e0491123232d30
-      x-skaffolder-nesteds: 
+      x-skaffolder-nesteds:
+        - 5fb9f521a3e0491123232d5d
       x-skaffolder-links: 
       x-skaffolder-roles: []
     - x-skaffolder-id: 5fb9c58da3e0491123232d32
@@ -1260,6 +1384,17 @@ components:
       x-skaffolder-links:
         - 5fb9c58da3e0491123232d26
       x-skaffolder-roles: []
+    - x-skaffolder-id: 5fb9f521a3e0491123232d5d
+      x-skaffolder-name: coursePage
+      x-skaffolder-url: /coursePage
+      x-skaffolder-template: 
+      x-skaffolder-resource: 
+      x-skaffolder-services: 
+      x-skaffolder-nesteds: 
+      x-skaffolder-links:
+        - 5fb9b32ea3e0491123232c67
+      x-skaffolder-roles:
+        - 5fb9b32ea3e0491123232c6a
     - x-skaffolder-id: 5fb9c596a3e0491123232d35
       x-skaffolder-name: examEdit
       x-skaffolder-url: /exams/{id}

@@ -9,7 +9,9 @@ import properties from "../properties.js";
 
 import UserModel from "../models/Mentoring_db/UserModel";
 import CourseModel from "../models/Mentoring_db/CourseModel";
+import CourseMaterialsModel from "../models/Mentoring_db/CourseMaterialsModel";
 import ExamModel from "../models/Mentoring_db/ExamModel";
+import Session_01Model from "../models/Mentoring_db/Session_01Model";
 import StudentModel from "../models/Mentoring_db/StudentModel";
 import TeacherModel from "../models/Mentoring_db/TeacherModel";
 
@@ -29,7 +31,9 @@ class Database {
 
 		UserModel.init();
 		CourseModel.init();
+		CourseMaterialsModel.init();
 		ExamModel.init();
+		Session_01Model.init();
 		StudentModel.init();
 		TeacherModel.init();
  // End Init Models

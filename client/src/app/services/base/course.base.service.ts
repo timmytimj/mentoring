@@ -43,6 +43,10 @@ import { Course } from '../../domain/mentoring_db/course';
 		//EXTERNAL RELATIONS
 		_course: {
 			type: Schema.ObjectId,
+			ref : "session_01"
+		},
+		_course: {
+			type: Schema.ObjectId,
 			ref : "exam"
 		},
 		_courses: [{

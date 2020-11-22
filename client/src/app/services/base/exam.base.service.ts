@@ -58,6 +58,10 @@ import { Exam } from '../../domain/mentoring_db/exam';
 			type: Schema.ObjectId,
 			ref : "exam"
 		},
+		_test: {
+			type: Schema.ObjectId,
+			ref : "courseMaterials"
+		},
 	}
  *
  */

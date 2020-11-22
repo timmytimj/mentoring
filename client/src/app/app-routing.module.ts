@@ -7,6 +7,7 @@ import { CanActivate, RouterModule, Routes } from '@angular/router';
 import { HomeComponent} from './pages/home/home.component';
 import { CourseEditComponent} from './pages/course-edit/course-edit.component';
 import { CourseListComponent} from './pages/course-list/course-list.component';
+import { CoursePageComponent} from './pages/course-page/course-page.component';
 import { ExamEditComponent} from './pages/exam-edit/exam-edit.component';
 import { ExamListComponent} from './pages/exam-list/exam-list.component';
 import { StudentEditComponent} from './pages/student-edit/student-edit.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
     { path: 'home',  loadChildren: './pages/home/home.module#HomeModule' , canActivate: [AuthGuard] },
     { path: 'courses/:id',  loadChildren: './pages/course-edit/course-edit.module#CourseEditModule' , canActivate: [AuthGuard] },
     { path: 'courses',  loadChildren: './pages/course-list/course-list.module#CourseListModule' , canActivate: [AuthGuard] },
+    { path: 'coursePage',  loadChildren: './pages/course-page/course-page.module#CoursePageModule' , canActivate: [AuthGuard], data:["ADMIN"] },
     { path: 'exams/:id',  loadChildren: './pages/exam-edit/exam-edit.module#ExamEditModule' , canActivate: [AuthGuard] },
     { path: 'exams',  loadChildren: './pages/exam-list/exam-list.module#ExamListModule' , canActivate: [AuthGuard] },
     { path: 'students/:id',  loadChildren: './pages/student-edit/student-edit.module#StudentEditModule' , canActivate: [AuthGuard] },

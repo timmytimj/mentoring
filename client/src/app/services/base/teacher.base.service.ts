@@ -47,6 +47,10 @@ import { Teacher } from '../../domain/mentoring_db/teacher';
 			type: Schema.ObjectId,
 			ref : "teacher"
 		}],
+		_instructor: [{
+			type: Schema.ObjectId,
+			ref : "courseMaterials"
+		}],
 		_teacher: {
 			type: Schema.ObjectId,
 			ref : "exam"

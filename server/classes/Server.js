@@ -29,7 +29,9 @@ import Database_Mentoring_db from "./Database_Mentoring_db.js";
 // Controllers
 import UserController from "../controllers/Mentoring_db/UserController";
 import CourseController from "../controllers/Mentoring_db/CourseController";
+import CourseMaterialsController from "../controllers/Mentoring_db/CourseMaterialsController";
 import ExamController from "../controllers/Mentoring_db/ExamController";
+import Session_01Controller from "../controllers/Mentoring_db/Session_01Controller";
 import StudentController from "../controllers/Mentoring_db/StudentController";
 import TeacherController from "../controllers/Mentoring_db/TeacherController";
 
@@ -114,7 +116,9 @@ class Server {
     // Start Init Controllers
 		UserController.init(router);
 		CourseController.init(router);
+		CourseMaterialsController.init(router);
 		ExamController.init(router);
+		Session_01Controller.init(router);
 		StudentController.init(router);
 		TeacherController.init(router);
 		 // End Init Controllers
